@@ -32,26 +32,6 @@ public class BaseSetup {
         ContextManager.setExtentTest(parent);
     }
 
-    // public String getBrowserDetails() {
-    // Capabilities broswerCap;
-    // try {
-    // broswerCap = BaseTest.getBaseDriver();
-    // } catch (NullPointerException e) {
-    // return null;
-    // }
-    // if
-    // (Constants.PLATFORM.equalsIgnoreCase(Constants.CONFIG_KEY_PLATFORM_MAC))
-    // {
-    // return broswerCap.getCapability("platformName") + " "
-    // + broswerCap.getCapability("browserName") + " "
-    // + broswerCap.getCapability("browserVersion");
-    // } else {
-    // return broswerCap.getCapability("platform") + " "
-    // + broswerCap.getCapability("browserName") + " "
-    // + broswerCap.getCapability("browserVersion");
-    // }
-    // }
-
     public static void assignCategoryToTest(String categoryName) {
         ExtentTest loggerReport = ContextManager.getExtentTest();
         loggerReport.assignCategory(categoryName);

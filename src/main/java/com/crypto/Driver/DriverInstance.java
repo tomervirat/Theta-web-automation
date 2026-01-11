@@ -91,12 +91,19 @@ public class DriverInstance {
 
     private static WebDriver createSafariWebDriverManager() {
         WebDriver driver;
-        WebDriverManager.chromedriver().setup();
+        // WebDriverManager.chromedriver().setup();
         SafariOptions safariOptions = new SafariOptions();
-        if (Constants.WINDOW_MAXIMIZE)
-            safariOptions.setCapability("start-maximized", true);
+
         driver = new SafariDriver(safariOptions);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(Constants.IMPLICIT_WAIT));
+
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(Constants.IMPLICIT_WAIT));
+        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(Constants.PAGE_LOAD_TIMEOUT));
+        driver.manage().timeouts().scriptTimeout(Duration.ofSeconds(Constants.SCRIPT_TIMEOUT));
+
+        if (Constants.WINDOW_MAXIMIZE) {
+            driver.manage().window().maximize();
+        }
         return driver;
     }
 
