@@ -40,4 +40,7 @@ To run the tests in safari, first change the browser in config file then follow 
 6. Allow Remote Automation
    Execute this command and enter the mac login screen password : ` sudo safaridriver --enable && mvn clean test`
 
-[Note] : If any popup comes on safari while automation, select allow Remote Automation
+[Note] : If any popup comes on safari while automation, select allow Remote Automation.
+
+## Automation Logs and Report
+After the execution of test cases, find the extent reports here```/state/reports/ ``` and the logs at here ```/state/logs```.
