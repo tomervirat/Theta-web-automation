@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Tests for QTrip Regression" parallel="classes" thread-count="1">
+    <!-- Add listeners -->
+    <listeners>
+        <listener class-name="org.testng.reporters.EmailableReporter2"/>
+        <listener class-name="org.testng.reporters.XMLReporter"/>
+        <listener class-name="com.crypto.base.TestContextListener"/>
+    </listeners>
+    <test name="BookingFlow" thread-count="2">
+        <!-- Add groups for tests -->
+        <groups>
+            <run>
+                <include name="sanity"/>
+            </run>
+        </groups>
+
+        <classes>
+            <class name="com.crypto.test.HomeScreenTest"/>
+        </classes>
+        
+    </test>
+</suite>
