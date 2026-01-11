@@ -14,6 +14,11 @@
    - Download and install from [Apache Maven](https://maven.apache.org/download.cgi)
    - Verify installation: `mvn -version`
 
+3. **Web Project**
+
+   - Web project given in the assignment should be up and running locally on the port 3000.
+   - Project link : (https://bitbucket.org/0xmvptech/ctrading/src/main/)
+     
 ### Configuration
 
 Configure the browser settings in `src/main/java/config/config.ini`:
